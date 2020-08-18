@@ -6,4 +6,9 @@ describe('shop', () => {
     let shop = new Shop()
     expect(shop.checkout('A')).toEqual(50)
   })
+
+  test('Should return 30 when passed B', () => {
+    let shop = new Shop()
+    expect(shop.checkout('B')).toEqual(30)
+  })
 })
