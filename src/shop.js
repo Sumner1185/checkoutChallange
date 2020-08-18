@@ -1,7 +1,11 @@
 class Shop {
 
-  checkout = () => {
-    return 50
+  checkout = (str) => {
+    if (str === 'A') {
+      return 50
+    } else {
+      return 30
+    }
   }
 }
 
