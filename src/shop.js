@@ -16,7 +16,9 @@ class Shop {
     const array = str.split('')
     let total = 0
     
-    if (this.isSpecialOffer(str)) {
+    if (this.hasIllegalCharacters(str)) {
+      return -1
+    } else if (this.isSpecialOffer(str)) {
       return this.specialOffers[str]
     } else {
       for (var i = 0; i < array.length; i++) {
@@ -29,6 +31,16 @@ class Shop {
   isSpecialOffer = (str) => {
     if (this.specialOffers[str]) {
       return true
+    }
+  }
+
+  hasIllegalCharacters = (str) => {
+    const array = str.split('')
+
+    for (var i = 0; i < array.length; i++) {
+      if (!this.items[array[i]]) {
+        return true
+      }
     }
   }
 
