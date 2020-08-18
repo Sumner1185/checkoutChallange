@@ -6,20 +6,18 @@ class Shop {
       'C': 20,
       'D': 15
     }
-    this.specialOffers = {
-      'AAA': 130,
-      'BB': 45
-    }
+    this.AAA_SPECIAL = 130
+    this.BB_SPECIAL = 45
   }
 
   checkout = (str) => {
-    const array = str.split('')
+    let array = str.split('')
     let total = 0
     
     if (this.hasIllegalCharacters(str)) {
       return -1
-    } else if (this.isSpecialOffer(str)) {
-      return this.specialOffers[str]
+    } else if (this.containsSpecialOffer(str)) {
+      return this.calculateSpecialOffers(str)
     } else {
       for (var i = 0; i < array.length; i++) {
         total += this.items[array[i]]
@@ -28,14 +26,30 @@ class Shop {
     }
   }
 
-  isSpecialOffer = (str) => {
-    if (this.specialOffers[str]) {
+  containsSpecialOffer = (str) => {
+    let array = str.split('')
+    let countA = array.filter(x => x === 'A').length
+    let countB = array.filter(x => x === 'B').length
+
+    if (countA >= 3 || countB >= 2) {
       return true
     }
   }
 
+  calculateSpecialOffers = (str) => {
+    let array = str.split('')
+    let total = 0
+    let countA = array.filter(x => x === 'A').length
+    let countB = array.filter(x => x === 'B').length
+
+    total += (countA / 3) * this.AAA_SPECIAL
+    total += (countB / 2) * this.BB_SPECIAL
+
+    return total
+  }
+
   hasIllegalCharacters = (str) => {
-    const array = str.split('')
+    let array = str.split('')
 
     for (var i = 0; i < array.length; i++) {
       if (!this.items[array[i]]) {
