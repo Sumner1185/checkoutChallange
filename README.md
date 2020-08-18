@@ -55,11 +55,11 @@ shop.checkout('AAAAAA') # => 260
 | 'AA' | 100 | x
 | 'AB' | 80 | x
 | 'CD' | 35 | x
-| 'ABC' | 100 |
-| 'AAA' | 130 |
+| 'ABC' | 100 | x
+| 'ABCD' | 115 | x
+| 'AAA' | 130 | x
 | 'BB' | 45 |
 | 'AAAAAA' | 260 |
-| 'ABCD' | 115 |
 | 18 | -1 |
 | '-B8x' | -1 |
 | 'aBc' | -1 |
