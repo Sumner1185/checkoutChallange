@@ -1,12 +1,16 @@
 class Shop {
 
   checkout = (str) => {
-    if (str === 'A') {
-      return 50
+    if (str === 'A' || str === 'AA') {
+      return str.length * 50
     } else if (str === 'B') {
       return 30
-    } else {
+    } else if(str === 'C') {
       return 20
+    } else if (str === 'D') {
+      return 15
+    } else {
+      return -1
     }
   }
 }
