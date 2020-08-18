@@ -45,3 +45,21 @@ shop.checkout('ABCD') # => 115
 shop.checkout('AAA') # => 130
 shop.checkout('AAAAAA') # => 260
 ```
+
+| input | output |
+|-------|--------|
+| 'A' | 50 |
+| 'B' | 30 |
+| 'C' | 20 |
+| 'D' | 15 |
+| 'AA' | 100 |
+| 'BB' | 45 |
+| 'AB' | 80 |
+| 'CD' | 35 |
+| 'ABC' | 100 |
+| 'AAA' | 130 |
+| 'AAAAAA' | 260 |
+| 'ABCD' | 115 |
+| 18 | -1 |
+| '-B8x' | -1 |
+| 'aBc' | -1 |
