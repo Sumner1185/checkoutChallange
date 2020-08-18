@@ -31,4 +31,14 @@ describe('shop', () => {
     let shop = new Shop()
     expect(shop.checkout('AB')).toEqual(80)
   })
+
+  test('Should return 100 when passed ABC', () => {
+    let shop = new Shop()
+    expect(shop.checkout('ABC')).toEqual(100)
+  })
+
+  test('Should return 115 when passed ABCD', () => {
+    let shop = new Shop()
+    expect(shop.checkout('ABCD')).toEqual(115)
+  })
 })
