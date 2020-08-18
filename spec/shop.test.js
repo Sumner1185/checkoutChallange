@@ -43,6 +43,10 @@ describe('shop', () => {
     test('Should return 45 when pass BB', () => {
       expect(shop.checkout('BB')).toEqual(45)
     })
-    
+
+    test('Should return 130 when pass AAA', () => {
+      expect(shop.checkout('BB')).toEqual(45)
+    })
+
   })
 })
