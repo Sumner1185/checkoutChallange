@@ -51,6 +51,10 @@ describe('shop', () => {
     test('Should return 260 when pass AAAAAA', () => {
       expect(shop.checkout('AAAAAA')).toEqual(260)
     })
+
+    test('Should return 175 when pass AAABB', () => {
+      expect(shop.checkout('AAABB')).toEqual(175)
+    })
   })
 
   describe('Illegal inputs', () => {
