@@ -37,4 +37,12 @@ describe('shop', () => {
   test('Should return 115 when passed ABCD', () => {
     expect(shop.checkout('ABCD')).toEqual(115)
   })
+
+  describe('Special offers', () => {
+
+    test('Should return 45 when pass BB', () => {
+      expect(shop.checkout('BB')).toEqual(45)
+    })
+    
+  })
 })
