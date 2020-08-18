@@ -1,17 +1,21 @@
 class Shop {
+  constructor() {
+    this.items = {
+      'A': 50,
+      'B': 30,
+      'C': 20,
+      'D': 15
+    }
+  }
 
   checkout = (str) => {
-    if (str === 'A' || str === 'AA') {
-      return str.length * 50
-    } else if (str === 'B') {
-      return 30
-    } else if(str === 'C') {
-      return 20
-    } else if (str === 'D') {
-      return 15
-    } else {
-      return -1
+    const array = str.split('')
+    let total = 0
+
+    for (var i = 0; i < array.length; i++) {
+      total += this.items[array[i]]
     }
+    return total
   }
 }
 
