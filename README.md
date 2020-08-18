@@ -58,8 +58,8 @@ shop.checkout('AAAAAA') # => 260
 | 'ABC' | 100 | x
 | 'ABCD' | 115 | x
 | 'AAA' | 130 | x
-| 'BB' | 45 |
-| 'AAAAAA' | 260 |
-| 18 | -1 |
-| '-B8x' | -1 |
-| 'aBc' | -1 |
+| 'BB' | 45 | x
+| 'AAAAAA' | 260 | x
+| 18 | -1 | x
+| '-B8x' | -1 | x
+| 'aBc' | -1 | x
