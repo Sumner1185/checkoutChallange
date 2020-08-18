@@ -51,8 +51,16 @@ describe('shop', () => {
 
   describe('Illegal inputs', () => {
 
-    test('Should return -1', () => {
-      expect(shop.checkout('aB')).toEqual(-1)
+    test('Should return -1 when given anything other than item letters', () => {
+      expect(shop.checkout('18')).toEqual(-1)
+    })
+
+    test('Should return -1 when given anything other than item letters', () => {
+      expect(shop.checkout('-B8x')).toEqual(-1)
+    })
+
+    test('Should return -1 when given anything other than item letters', () => {
+      expect(shop.checkout('aBc')).toEqual(-1)
     })
   })
 })
